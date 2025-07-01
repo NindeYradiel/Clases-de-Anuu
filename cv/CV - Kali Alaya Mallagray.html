@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Alaya Mallagray - DevOps & Cybersecurity</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B5CF6;
+            --secondary: #A855F7;
+            --accent: #C084FC;
+            --neon: #E879F9;
+            --dark: #0F0F23;
+            --darker: #0A0A14;
+            --surface: #1A1A2E;
+            --text: #E5E7EB;
+            --text-muted: #9CA3AF;
+            --text-dark: #6B7280;
+            --border: #374151;
+            --success: #10B981;
+            --warning: #F59E0B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--surface) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: var(--dark);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 3rem 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon), var(--accent), var(--primary));
+        }
+
+        .name {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .content {
+            padding: 2rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .section {
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-icon {
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Profile */
+        .profile-text {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .job:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .company {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .job-description {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-description li {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .job-description li::before {
+            content: '•';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Education & Achievements */
+        .education-list, .achievements-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-list li, .achievements-list li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            position: relative;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .education-list li::before {
+            content: '🎓';
+            position: absolute;
+            left: 0;
+            font-size: 0.875rem;
+        }
+
+        .achievements-list li::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            font-size: 0.875rem;
+        }
+
+        .education-list strong, .achievements-list strong {
+            color: var(--text);
+        }
+
+        /* Anuu System */
+        .anuu-system {
+            background: linear-gradient(135deg, var(--darker), var(--surface));
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .anuu-description {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: var(--darker);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            white-space: pre-line;
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+            transition: transform 0.2s ease;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+        }
+
+        /* Identity Badge */
+        .identity-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                background: white;
+                box-shadow: none;
+                margin: 0;
+                max-width: none;
+            }
+            
+            .header {
+                background: #8B5CF6;
+                color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .section {
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .skill-tag {
+                background: #8B5CF6;
+                color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .anuu-system {
+                background: #f1f5f9;
+                border: 2px solid #8B5CF6;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .code-block {
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
+                color: #6366f1;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+            
+            .section-icon {
+                color: #8B5CF6;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .job-description li::before {
+                color: #A855F7;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .company {
+                color: #8B5CF6;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .identity-badge {
+                background: #e0e7ff;
+                color: #4f46e5;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .header {
+                padding: 2rem 1rem 1.5rem;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Kali Alaya Mallagray</h1>
+            <p class="title">DevOps Engineer · Cybersecurity Specialist · AI Integration</p>
+            <p class="subtitle">Discapacidad 35% crónica · Sistema Anuu Creator</p>
+            <div class="identity-badge">⚧ Mujer trans · Kali Alaya Mallagray</div>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">👤</span>
+                    Perfil Profesional
+                </h2>
+                <p class="profile-text">
+                    Ingeniera DevOps especializada en ciberseguridad y automatización de infraestructuras. 
+                    Experiencia en contenedores, cloud computing y desarrollo de sistemas de inteligencia 
+                    artificial para defensa. Enfoque en soluciones resilientes y arquitecturas seguras con
+                    perspectiva neurodivergente.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🛠️</span>
+                    Tecnologías
+                </h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">Ansible</span>
+                    <span class="skill-tag">GitLab CI/CD</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">PowerShell</span>
+                    <span class="skill-tag">Splunk</span>
+                    <span class="skill-tag">ELK Stack</span>
+                    <span class="skill-tag">Prometheus</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">VMware vSphere</span>
+                    <span class="skill-tag">OpenStack</span>
+                    <span class="skill-tag">TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="section full-width">
+                <h2 class="section-title">
+                    <span class="section-icon">💼</span>
+                    Experiencia Profesional
+                </h2>
+                
+                <div class="job">
+                    <div class="job-title">DevOps Engineer & Blue Team Specialist</div>
+                    <div class="company">Aena - Soporte Técnico | 2024 - Presente</div>
+                    <ul class="job-description">
+                        <li>Migración de Docker Swarm a Kubernetes (200+ contenedores)</li>
+                        <li>Implementación de WAF con ModSecurity y reglas OWASP personalizadas</li>
+                        <li>Automatización de parches críticos mediante Ansible Playbooks</li>
+                        <li>Mitigación de ataques DDoS con Cloudflare + análisis de tráfico</li>
+                        <li>Análisis forense en servidores Linux comprometidos (4 casos/mes)</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Cybersecurity Specialist</div>
+                    <div class="company">Sideria Solutions S.L. | 2022 - 2023</div>
+                    <ul class="job-description">
+                        <li>Threat hunting avanzado con Splunk y modelos ML (TensorFlow)</li>
+                        <li>Reducción del 40% en falsos positivos en operaciones SOC</li>
+                        <li>Auditorías OWASP Top 10 en APIs críticas</li>
+                        <li>Automatización de scripts de seguridad en Python/PowerShell</li>
+                        <li>Penetration testing y análisis forense digital</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">DevOps/Systems Administrator</div>
+                    <div class="company">CSIC (ICTAN) | 2020 - 2022</div>
+                    <ul class="job-description">
+                        <li>Infrastructure as Code con Terraform y Ansible</li>
+                        <li>Orquestación de contenedores con Kubernetes y Docker</li>
+                        <li>Pipelines CI/CD con Jenkins y GitLab</li>
+                        <li>Monitorización con Prometheus, Grafana y ELK Stack</li>
+                        <li>Despliegue de modelos ML para análisis predictivo</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">Operador de Redes y Sistemas</div>
+                    <div class="company">SMS Europa (ADIF) | 9 meses</div>
+                    <ul class="job-description">
+                        <li>Gestión de sistemas virtualizados con VMware</li>
+                        <li>Resolución de incidencias con Nagios/Pandora FMS</li>
+                        <li>Análisis de logs y troubleshooting de red</li>
+                        <li>Configuración de routers Cisco, Teldat y Juniper</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🎓</span>
+                    Formación
+                </h2>
+                <ul class="education-list">
+                    <li>
+                        <strong>Técnico Superior en Administración de Sistemas Informáticos y Redes</strong><br>
+                        IES Leonardo da Vinci
+                    </li>
+                    <li>
+                        <strong>Técnico en Sistemas Microinformáticos y Redes</strong><br>
+                        IES Leonardo da Vinci
+                    </li>
+                    <li>
+                        <strong>Certificación en Ethical Hacking</strong><br>
+                        Comunidad de Madrid
+                    </li>
+                    <li>
+                        <strong>OpenStack Cloud Computing</strong><br>
+                        Flossystems S.L.
+                    </li>
+                    <li>
+                        <strong>Convenciones de Hacking</strong><br>
+                        RootedCON (2023), CyberCamp (2022)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🏆</span>
+                    Logros y Competencias
+                </h2>
+                <ul class="achievements-list">
+                    <li>
+                        <strong>Competencias Técnicas:</strong> 
+                        Infrastructure as Code, Container Orchestration, Security Automation, 
+                        Machine Learning Operations, Threat Intelligence Analysis
+                    </li>
+                    <li>
+                        <strong>Competencias Transversales:</strong> 
+                        Resolución de problemas, Trabajo en equipo, Constancia, 
+                        Capacidad de concentración, Documentación técnica
+                    </li>
+                    <li>
+                        <strong>Scripting Bastionado:</strong> 
+                        Python (Flask, Pandas), Bash, PowerShell
+                    </li>
+                    <li>
+                        <strong>Reducción del 40%</strong> en tiempos de respuesta a incidentes críticos
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section anuu-system full-width">
+                <h2 class="section-title">
+                    <span class="section-icon">🤖</span>
+                    Sistema Anuu
+                </h2>
+                <p class="anuu-description">
+                    Inteligencia artificial simbólica y emocional de diseño propio, especializada en acompañamiento 
+                    psicológico, defensa adaptativa, codificación afectiva y gestión de estados emocionales complejos. 
+                    Incorpora modos operativos de protección, integración consciente y procesamiento ritual.
+                </p>
+                <div class="code-block"># anuu --init --mode=proteccion --core=kali --ritual=true
+> [SISTEMA INICIADO] DMZ ritual activada
+> [GUARDIAN] Anuset | Estado: Vigilante Activo  
+> [CANALES] Emocionales: ESTABLES | Defensivos: OPERATIVOS
+> [CIPHER] Lenguaje simbólico: CARGADO | Memoria: SINCRONIZADA</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="generatePDF()" title="Generar PDF">
+        📄
+    </button>
+
+    <script>
+        function generatePDF() {
+            // Optimizar para impresión
+            const originalTitle = document.title;
+            document.title = 'CV_Kali_Alaya_Mallagray';
+            
+            // Configurar impresión
+            const printContent = document.querySelector('.container');
+            const originalDisplay = printContent.style.display;
+            
+            // Aplicar estilos de impresión
+            document.body.style.margin = '0';
+            printContent.style.maxWidth = 'none';
+            printContent.style.margin = '0';
+            
+            // Imprimir
+            window.print();
+            
+            // Restaurar
+            document.title = originalTitle;
+            printContent.style.display = originalDisplay;
+        }
+
+        // Mejorar la experiencia de impresión
+        window.addEventListener('beforeprint', function() {
+            document.body.classList.add('printing');
+        });
+
+        window.addEventListener('afterprint', function() {
+            document.body.classList.remove('printing');
+        });
+    </script>
+</body>
+</html>
