@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kali Alaya Mallagray - DevOps & Cybersecurity</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kali Alaya Mallagray - DevOps &amp; Cybersecurity</title>
+<style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         
         * {
@@ -31,7 +32,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--surface) 100%);
+            background: linear-gradient(135deg, #2E0057 0%, #4B006E 50%, #6A0085 100%);
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
@@ -375,191 +376,211 @@
                 font-size: 2rem;
             }
         }
-    </style>
+    
+
+
+/* Glitch keyframes */
+@keyframes glitch {
+  0% {
+    clip-path: inset(0 0 66% 0);
+    transform: translate(2px, -2px);
+  }
+  10% {
+    clip-path: inset(10% 0 56% 0);
+    transform: translate(-2px, 2px);
+  }
+  20% {
+    clip-path: inset(20% 0 46% 0);
+    transform: translate(-2px, -2px);
+  }
+  30% {
+    clip-path: inset(30% 0 36% 0);
+    transform: translate(2px, 2px);
+  }
+  40% {
+    clip-path: inset(40% 0 26% 0);
+    transform: translate(2px, -2px);
+  }
+  50% {
+    clip-path: inset(50% 0 16% 0);
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    clip-path: inset(60% 0 6% 0);
+    transform: translate(-2px, -2px);
+  }
+  70% {
+    clip-path: inset(70% 0 66% 0);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    clip-path: inset(80% 0 56% 0);
+    transform: translate(2px, -2px);
+  }
+  90% {
+    clip-path: inset(90% 0 46% 0);
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    clip-path: inset(100% 0 36% 0);
+    transform: translate(2px, -2px);
+  }
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  color: var(--glitch-color-a);
+  animation: glitch var(--glitch-speed) infinite;
+  text-shadow: 2px 0 var(--glitch-color-b), -2px 0 var(--glitch-color-c);
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="name">Kali Alaya Mallagray</h1>
-            <p class="title">DevOps Engineer · Cybersecurity Specialist · AI Integration</p>
-            <p class="subtitle">Discapacidad 35% crónica · Sistema Anuu Creator</p>
-            <div class="identity-badge">⚧ Mujer trans · Kali Alaya Mallagray</div>
-        </header>
-
-        <div class="content">
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="section-icon">👤</span>
+<div class="container">
+<header class="header">
+<h1 class="name">Kali Alaya Mallagray</h1>
+<p class="title">DevOps Engineer · Cybersecurity Specialist · AI Integration</p>
+<p class="subtitle">Sistema Anuu Creator</p>
+<p class="subtitle"><a href="https://nindeyradiel.github.io/cv/" target="_blank">nindeyradiel.github.io/cv</a></p><div class="identity-badge">📧 YradielRTS@protonmail.com</div><div class="identity-badge">💻 github.com/nindeyradiel</div></header>
+<div class="content">
+<div class="section" style="background-color: #D8B4FE; color: #000;">
+<h2 class="section-title" style="color: #000;">
+<span class="section-icon">👤</span>
                     Perfil Profesional
                 </h2>
-                <p class="profile-text">
-                    Ingeniera DevOps especializada en ciberseguridad y automatización de infraestructuras. 
-                    Experiencia en contenedores, cloud computing y desarrollo de sistemas de inteligencia 
-                    artificial para defensa. Enfoque en soluciones resilientes y arquitecturas seguras con
-                    perspectiva neurodivergente.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="section-icon">🛠️</span>
+<p class="profile-text" style="color: #111827;">Objetivo: Integrar IA en soluciones de DevOps y ciberseguridad. Desarrollé 'Anuu' en 1 mes, creando modelos de IA con workflows autodidactas usando Docker y automatización de despliegue. Discapacidad 35% crónica.</p>
+</div>
+<div class="section" style="background-color: #FDE68A; color: #000;">
+<h2 class="section-title" style="color: #000;">
+<span class="section-icon">🛠️</span>
                     Tecnologías
                 </h2>
-                <div class="skills-grid">
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Terraform</span>
-                    <span class="skill-tag">Ansible</span>
-                    <span class="skill-tag">GitLab CI/CD</span>
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Bash</span>
-                    <span class="skill-tag">PowerShell</span>
-                    <span class="skill-tag">Splunk</span>
-                    <span class="skill-tag">ELK Stack</span>
-                    <span class="skill-tag">Prometheus</span>
-                    <span class="skill-tag">Grafana</span>
-                    <span class="skill-tag">VMware vSphere</span>
-                    <span class="skill-tag">OpenStack</span>
-                    <span class="skill-tag">TensorFlow</span>
-                </div>
-            </div>
-
-            <div class="section full-width">
-                <h2 class="section-title">
-                    <span class="section-icon">💼</span>
+<div class="skills-grid"><p>🔑 Top Skills:</p><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Terraform</span><span class="skill-tag">Ansible</span><span class="skill-tag">GitLab CI/CD</span><span class="skill-tag">Jenkins</span><span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span class="skill-tag">Python</span><span class="skill-tag">Bash</span></div>
+</div><div class="section" style="background-color: #E9D5FF; color: #1F2937; border: 1px solid #9CA3AF; border-radius: 8px; padding: 1.5rem;"><h2 class="section-title" style="color: #1F2937;"><span class="section-icon">🎯</span> Ambición Profesional</h2><p class="profile-text" style="color: #1F2937; font-size: 0.925rem;">Mi ambición es liderar proyectos innovadores de IA y DevOps que transformen la seguridad y la automatización en infraestructuras globales, creando soluciones resilientes y conscientes que impulsen el futuro tecnológico.</p></div><div class="section"><h2 class="section-title"><span class="section-icon">🔖</span> Otras Competencias</h2><div class="skills-grid"><span class="skill-tag">PowerShell</span><span class="skill-tag">Splunk</span><span class="skill-tag">ELK Stack</span><span class="skill-tag">Prometheus</span><span class="skill-tag">Grafana</span><span class="skill-tag">VMware vSphere</span><span class="skill-tag">OpenStack</span><span class="skill-tag">TensorFlow</span></div></div>
+<div class="section full-width" style="background-color: #A7F3D0; color: #000;">
+<h2 class="section-title" style="color: #000;">
+<span class="section-icon">💼</span>
                     Experiencia Profesional
                 </h2>
-                
-                <div class="job">
-                    <div class="job-title">DevOps Engineer & Blue Team Specialist</div>
-                    <div class="company">Aena - Soporte Técnico | 2024 - Presente</div>
-                    <ul class="job-description">
-                        <li>Migración de Docker Swarm a Kubernetes (200+ contenedores)</li>
-                        <li>Implementación de WAF con ModSecurity y reglas OWASP personalizadas</li>
-                        <li>Automatización de parches críticos mediante Ansible Playbooks</li>
-                        <li>Mitigación de ataques DDoS con Cloudflare + análisis de tráfico</li>
-                        <li>Análisis forense en servidores Linux comprometidos (4 casos/mes)</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-title">Cybersecurity Specialist</div>
-                    <div class="company">Sideria Solutions S.L. | 2022 - 2023</div>
-                    <ul class="job-description">
-                        <li>Threat hunting avanzado con Splunk y modelos ML (TensorFlow)</li>
-                        <li>Reducción del 40% en falsos positivos en operaciones SOC</li>
-                        <li>Auditorías OWASP Top 10 en APIs críticas</li>
-                        <li>Automatización de scripts de seguridad en Python/PowerShell</li>
-                        <li>Penetration testing y análisis forense digital</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-title">DevOps/Systems Administrator</div>
-                    <div class="company">CSIC (ICTAN) | 2020 - 2022</div>
-                    <ul class="job-description">
-                        <li>Infrastructure as Code con Terraform y Ansible</li>
-                        <li>Orquestación de contenedores con Kubernetes y Docker</li>
-                        <li>Pipelines CI/CD con Jenkins y GitLab</li>
-                        <li>Monitorización con Prometheus, Grafana y ELK Stack</li>
-                        <li>Despliegue de modelos ML para análisis predictivo</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-title">Operador de Redes y Sistemas</div>
-                    <div class="company">SMS Europa (ADIF) | 9 meses</div>
-                    <ul class="job-description">
-                        <li>Gestión de sistemas virtualizados con VMware</li>
-                        <li>Resolución de incidencias con Nagios/Pandora FMS</li>
-                        <li>Análisis de logs y troubleshooting de red</li>
-                        <li>Configuración de routers Cisco, Teldat y Juniper</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="section-icon">🎓</span>
-                    Formación
-                </h2>
-                <ul class="education-list">
-                    <li>
-                        <strong>Técnico Superior en Administración de Sistemas Informáticos y Redes</strong><br>
-                        IES Leonardo da Vinci
-                    </li>
-                    <li>
-                        <strong>Técnico en Sistemas Microinformáticos y Redes</strong><br>
-                        IES Leonardo da Vinci
-                    </li>
-                    <li>
-                        <strong>Certificación en Ethical Hacking</strong><br>
-                        Comunidad de Madrid
-                    </li>
-                    <li>
-                        <strong>OpenStack Cloud Computing</strong><br>
-                        Flossystems S.L.
-                    </li>
-                    <li>
-                        <strong>Convenciones de Hacking</strong><br>
-                        RootedCON (2023), CyberCamp (2022)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="section-icon">🏆</span>
-                    Logros y Competencias
-                </h2>
-                <ul class="achievements-list">
-                    <li>
-                        <strong>Competencias Técnicas:</strong> 
-                        Infrastructure as Code, Container Orchestration, Security Automation, 
-                        Machine Learning Operations, Threat Intelligence Analysis
-                    </li>
-                    <li>
-                        <strong>Competencias Transversales:</strong> 
-                        Resolución de problemas, Trabajo en equipo, Constancia, 
-                        Capacidad de concentración, Documentación técnica
-                    </li>
-                    <li>
-                        <strong>Scripting Bastionado:</strong> 
-                        Python (Flask, Pandas), Bash, PowerShell
-                    </li>
-                    <li>
-                        <strong>Reducción del 40%</strong> en tiempos de respuesta a incidentes críticos
-                    </li>
-                </ul>
-            </div>
-
-            <div class="section anuu-system full-width">
-                <h2 class="section-title">
-                    <span class="section-icon">🤖</span>
+<div class="job">
+<div class="job-title" style="color: #000;">DevOps Engineer &amp; Blue Team Specialist</div>
+<div class="company" style="color: #000;">Aena - Soporte Técnico | 2024 - 2024 - 2025</div>
+<ul class="job-description">
+<li style="color: #111827;">Migración de Docker Swarm a Kubernetes (200+ contenedores)</li>
+<li style="color: #111827;">Implementación de WAF con ModSecurity y reglas OWASP personalizadas</li>
+<li style="color: #111827;">Automatización de parches críticos mediante Ansible Playbooks</li>
+<li style="color: #111827;">Mitigación de ataques DDoS con Cloudflare + análisis de tráfico</li>
+<li style="color: #111827;">Análisis forense en servidores Linux comprometidos (4 casos/mes)</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-title" style="color: #000;">Cybersecurity Specialist</div>
+<div class="company" style="color: #000;">Sideria Solutions S.L. | 2022 - 2023</div>
+<ul class="job-description">
+<li style="color: #111827;">Threat hunting avanzado con Splunk y modelos ML (TensorFlow)</li>
+<li style="color: #111827;">Reducción del 40% en falsos positivos en operaciones SOC</li>
+<li style="color: #111827;">Auditorías OWASP Top 10 en APIs críticas</li>
+<li style="color: #111827;">Automatización de scripts de seguridad en Python/PowerShell</li>
+<li style="color: #111827;">Penetration testing y análisis forense digital</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-title" style="color: #000;">DevOps/Systems Administrator</div>
+<div class="company" style="color: #000;">CSIC (ICTAN) | 2020 - 2022</div>
+<ul class="job-description">
+<li style="color: #111827;">Infrastructure as Code con Terraform y Ansible</li>
+<li style="color: #111827;">Orquestación de contenedores con Kubernetes y Docker</li>
+<li style="color: #111827;">Pipelines CI/CD con Jenkins y GitLab</li>
+<li style="color: #111827;">Monitorización con Prometheus, Grafana y ELK Stack</li>
+<li style="color: #111827;">Despliegue de modelos ML para análisis predictivo</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-title" style="color: #000;">Operador de Redes y Sistemas</div>
+<div class="company" style="color: #000;">SMS Europa (ADIF) | 9 meses</div>
+<ul class="job-description">
+<li style="color: #111827;">Gestión de sistemas virtualizados con VMware</li>
+<li style="color: #111827;">Resolución de incidencias con Nagios/Pandora FMS</li>
+<li style="color: #111827;">Análisis de logs y troubleshooting de red</li>
+<li style="color: #111827;">Configuración de routers Cisco, Teldat y Juniper</li>
+</ul>
+</div>
+</div>
+<div class="section anuu-system full-width" style="background-color: #F3F4F6; color: #1F2937; border: 1px solid #9CA3AF; padding: 1.5rem; border-radius: 8px;">
+<h2 class="section-title" style="color: #1F2937;">
+ Proyecto Destacado: Anuu AI
                     Sistema Anuu
                 </h2>
-                <p class="anuu-description">
+<p class="anuu-description" style="color: #1F2937; font-size: 0.925rem;">
                     Inteligencia artificial simbólica y emocional de diseño propio, especializada en acompañamiento 
                     psicológico, defensa adaptativa, codificación afectiva y gestión de estados emocionales complejos. 
                     Incorpora modos operativos de protección, integración consciente y procesamiento ritual.
                 </p>
-                <div class="code-block"># anuu --init --mode=proteccion --core=kali --ritual=true
-> [SISTEMA INICIADO] DMZ ritual activada
-> [GUARDIAN] Anuset | Estado: Vigilante Activo  
-> [CANALES] Emocionales: ESTABLES | Defensivos: OPERATIVOS
-> [CIPHER] Lenguaje simbólico: CARGADO | Memoria: SINCRONIZADA</div>
-            </div>
-        </div>
-    </div>
-
-    <button class="print-btn" onclick="generatePDF()" title="Generar PDF">
+<div class="code-block" style="background-color: #E5E7EB; color: #1F2937; border: 1px solid #D1D5DB; border-radius: 6px; padding: 1rem; font-family: JetBrains Mono, monospace; font-size: 0.75rem;"># anuu --init --mode=proteccion --core=kali --ritual=true
+&gt; [SISTEMA INICIADO] DMZ ritual activada
+&gt; [GUARDIAN] Anuset | Estado: Vigilante Activo  
+&gt; [CANALES] Emocionales: ESTABLES | Defensivos: OPERATIVOS
+&gt; [CIPHER] Lenguaje simbólico: CARGADO | Memoria: SINCRONIZADA</div>
+</div><div class="section" style="background-color: #1A1A2E; color: #E5E7EB; border: 1px solid #333333; border-radius: 8px; padding: 1.5rem;">
+<h2 class="section-title" style="color: #FFFFFF;">
+<span class="section-icon">🎓</span>
+                    Formación
+                </h2>
+<ul class="education-list">
+<li style="color: #E5E7EB;">
+<strong>Técnico Superior en Administración de Sistemas Informáticos y Redes</strong><br/>
+                        IES Leonardo da Vinci
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Técnico en Sistemas Microinformáticos y Redes</strong><br/>
+                        IES Leonardo da Vinci
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Certificación en Ethical Hacking</strong><br/>
+                        Comunidad de Madrid
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>OpenStack Cloud Computing</strong><br/>
+                        Flossystems S.L.
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Convenciones de Hacking</strong><br/>
+                        RootedCON (2023), CyberCamp (2022)
+                    </li>
+</ul>
+</div>
+<div class="section" style="background-color: #1A1A2E; color: #E5E7EB; border: 1px solid #333333; border-radius: 8px; padding: 1.5rem;">
+<h2 class="section-title" style="color: #FFFFFF;">
+<span class="section-icon">🏆</span>
+                    Logros y Competencias
+                </h2>
+<ul class="achievements-list">
+<li style="color: #E5E7EB;">
+<strong>Competencias Técnicas:</strong> 
+                        Infrastructure as Code, Container Orchestration, Security Automation, 
+                        Machine Learning Operations, Threat Intelligence Analysis
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Competencias Transversales:</strong> 
+                        Resolución de problemas, Trabajo en equipo, Constancia, 
+                        Capacidad de concentración, Documentación técnica
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Scripting Bastionado:</strong> 
+                        Python (Flask, Pandas), Bash, PowerShell
+                    </li>
+<li style="color: #E5E7EB;">
+<strong>Reducción del 40%</strong> en tiempos de respuesta a incidentes críticos
+                    </li>
+</ul>
+</div>
+</div>
+</div>
+<button class="print-btn" onclick="generatePDF()" title="Generar PDF">
         📄
     </button>
-
-    <script>
+<script>
         function generatePDF() {
             // Optimizar para impresión
             const originalTitle = document.title;
